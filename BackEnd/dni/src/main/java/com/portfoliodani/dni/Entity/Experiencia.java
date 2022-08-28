@@ -12,16 +12,16 @@ public class Experiencia {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private String nombreE;
-    private String descriptionE;
+    private String descripcionE;
     
     //Constructor
 
     public Experiencia() {
     }
 
-    public Experiencia(String nombreE, String descriptionE) {
+    public Experiencia(String nombreE, String descripcionE) {
         this.nombreE = nombreE;
-        this.descriptionE = descriptionE;
+        this.descripcionE = descripcionE;
     }
     
     //Getter and Setter
@@ -42,12 +42,12 @@ public class Experiencia {
         this.nombreE = nombreE;
     }
 
-    public String getDescriptionE() {
-        return descriptionE;
+    public String getDescripcionE() {
+        return descripcionE;
     }
 
-    public void setDescriptionE(String descriptionE) {
-        this.descriptionE = descriptionE;
+    public void setDescripcionE(String descripcionE) {
+        this.descripcionE = descripcionE;
     }
     
     

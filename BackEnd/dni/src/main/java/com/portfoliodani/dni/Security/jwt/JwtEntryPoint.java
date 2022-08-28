@@ -2,6 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
+
 package com.portfoliodani.dni.Security.jwt;
 
 
@@ -21,8 +22,8 @@ public class JwtEntryPoint implements AuthenticationEntryPoint{
 
     @Override
     public void commence(HttpServletRequest request, HttpServletResponse response, AuthenticationException authException) throws IOException, ServletException {
-        logger.error("Fallo el metodo commence");
-        response.sendError(HttpServletResponse.SC_UNAUTHORIZED, "no esta autorizado");
+        logger.error("Fallo el metodo commence ");
+        response.sendError(HttpServletResponse.SC_UNAUTHORIZED);
     }
     
 }
