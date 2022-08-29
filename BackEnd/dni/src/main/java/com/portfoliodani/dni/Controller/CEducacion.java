@@ -35,21 +35,6 @@ public class CEducacion {
         List<Educacion> list = sEducacion.list();
         return new ResponseEntity(list, HttpStatus.OK);
     }
-    @GetMapping("/detail/{id}")
-    public ResponseEntity<Educacion> getById(@PathVariable("id")int id){
-        if(!sEducacion.existsById(id))
-            return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
-        Educacion educacion = sEducacion.getOne(id).get();
-        return new ResponseEntity(educacion, HttpStatus.OK);
-    }
-    
-    @DeleteMapping("/delete/{id}")
-    public ResponseEntity<?> delete(@PathVariable("id") int id){
-        if(!sEducacion.existsById(id))
-            return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);
-        sEducacion.delete(id);
-        return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
-    }
     
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoEducacion dtoeducacion){
@@ -82,5 +67,21 @@ public class CEducacion {
         sEducacion.save(educacion);
         
         return new ResponseEntity(new Mensaje("Educacion actualizada"), HttpStatus.OK);
+    }
+    
+    @GetMapping("/detail/{id}")
+    public ResponseEntity<Educacion> getById(@PathVariable("id")int id){
+        if(!sEducacion.existsById(id))
+            return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.NOT_FOUND);
+        Educacion educacion = sEducacion.getOne(id).get();
+        return new ResponseEntity(educacion, HttpStatus.OK);
+    }
+    
+    @DeleteMapping("/delete/{id}")
+    public ResponseEntity<?> delete(@PathVariable("id") int id){
+        if(!sEducacion.existsById(id))
+            return new ResponseEntity(new Mensaje("No existe el ID"), HttpStatus.BAD_REQUEST);
+        sEducacion.delete(id);
+        return new ResponseEntity(new Mensaje("Educacion eliminada"), HttpStatus.OK);
     }
 }
