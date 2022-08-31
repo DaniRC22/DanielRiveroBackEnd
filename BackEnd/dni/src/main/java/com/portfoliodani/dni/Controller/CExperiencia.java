@@ -35,7 +35,7 @@ public class CExperiencia {
             List<Experiencia> list = sExperiencia.list();
             return new ResponseEntity(list, HttpStatus.OK);
 }
-    
+
     @PostMapping("/create")
     public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexp){
         if(StringUtils.isBlank(dtoexp.getNombreE()))
@@ -48,7 +48,7 @@ public class CExperiencia {
                 
                 return new ResponseEntity(new Mensaje("Experiencia agregada"), HttpStatus.OK);
     }
-    
+   
     @PutMapping("/update/{id}")
     public ResponseEntity<?> update(@PathVariable("id") int id, @RequestBody dtoExperiencia dtoexp){
         if(!sExperiencia.existsById(id))
@@ -67,7 +67,7 @@ public class CExperiencia {
         sExperiencia.save(experiencia);
         return new ResponseEntity(new Mensaje("Experiencia actualizada"), HttpStatus.OK);
     }
-   
+ 
     @DeleteMapping("/delete/{id}")
     public ResponseEntity<?> delete(@PathVariable("id") int id){
         if(!sExperiencia.existsById(id))
