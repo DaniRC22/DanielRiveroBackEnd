@@ -25,7 +25,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/hard")
-@CrossOrigin(origins = "https://frontenddani.web.app/")
+@CrossOrigin(origins = {"https://frontenddani.web.app/", "http://localhost:4200/"})
 public class CHard {
     @Autowired
     SHard sHard;
