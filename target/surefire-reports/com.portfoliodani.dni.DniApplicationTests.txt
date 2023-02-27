@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.portfoliodani.dni.DniApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 89.69 s - in com.portfoliodani.dni.DniApplicationTests
